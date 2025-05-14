@@ -1,10 +1,374 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+  <head>
     <meta charset="UTF-8" />
-    <title>title</title>
-</head>
-<body>
-    <div>hello world</div>
-</body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jadoo - Travel Agency</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#"
+          ><img src="assets/images/Logo.png"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Destinations</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Hotels</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Flights</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Bookings</a></li>
+            <a class="nav-link" href="#">Login</a>
+            <a class="btn-nav" href="#">Sign Up</a>
+            <a class="nav-link ms-2" href="#">EN</a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+<!-- Hero Section -->
+<section class="hero-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <span class="orange-label">Best Destinations Around The World</span>
+        <h1 class="display-4 fw-bold">
+          Travel, enjoy and live a new and full life
+        </h1>
+        <p class="lead">
+          Built Wicket longer admire do barton vanity itself do in it.
+          Preferred to sportsmen it engrossed listening. Park gate sell they
+          west hard for the.
+        </p>
+        <button class="btn btn-warning text-white me-2">
+          Find out more
+        </button>
+        <button class="btn btn-outline-secondary">Play Demo</button>
+      </div>
+      <div class="col-md-6">
+        <img
+          src="assets/images/girl.png"
+          alt="Traveler"
+          class="img-fluid"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+    <!-- Services Section -->
+    <section class="services-section py-5">
+      <div class="container">
+        <span class="text-warning">Category</span>
+        <h2 class="text-center mb-4">We Offer Best Services</h2>
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body text-center">
+                <div class="mb-3">
+                  <img src="https://via.placeholder.com/50" alt="Weather" />
+                </div>
+                <h5>Calculated Weather</h5>
+                <p>
+                  Built Wicket longer admire do barton vanity itself do in it.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card h-100 shadow-sm border-warning">
+              <div class="card-body text-center">
+                <div class="mb-3">
+                  <img src="https://via.placeholder.com/50" alt="Flights" />
+                </div>
+                <h5>Best Flights</h5>
+                <p>
+                  Engrossed listening. Park gate sell they west hard for the.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body text-center">
+                <div class="mb-3">
+                  <img src="https://via.placeholder.com/50" alt="Events" />
+                </div>
+                <h5>Local Events</h5>
+                <p>
+                  Barton vanity itself do in it. Preferred to men it engrossed
+                  listening.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body text-center">
+                <div class="mb-3">
+                  <img
+                    src="https://via.placeholder.com/50"
+                    alt="Customization"
+                  />
+                </div>
+                <h5>Customization</h5>
+                <p>
+                  We deliver outsourced aviation services for military
+                  customers.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top Destinations Section -->
+    <section class="destinations-section py-5">
+      <div class="container">
+        <span class="text-warning">Top Selling</span>
+        <h2 class="text-center mb-4">Top Destinations</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <img
+                src="https://via.placeholder.com/400x300"
+                alt="Rome"
+                class="card-img-top"
+              />
+              <div class="card-body text-center">
+                <h5>Rome, Italy</h5>
+                <p>$5.42K, 10 Days Trip</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <img
+                src="https://via.placeholder.com/400x300"
+                alt="London"
+                class="card-img-top"
+              />
+              <div class="card-body text-center">
+                <h5>London, UK</h5>
+                <p>$4.2K, 12 Days Trip</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <img
+                src="https://via.placeholder.com/400x300"
+                alt="Europe"
+                class="card-img-top"
+              />
+              <div class="card-body text-center">
+                <h5>Full Europe</h5>
+                <p>$15K, 28 Days Trip</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking Steps Section -->
+    <section class="booking-section py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h2>Book Your Next Trip In 3 Easy Steps</h2>
+            <div class="list-group">
+              <div class="list-group-item">
+                <div class="mb-2">
+                  <img src="https://via.placeholder.com/30" alt="Step 1" />
+                </div>
+                <h5>Choose Destination</h5>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna,
+                  tortor tempus.
+                </p>
+              </div>
+              <div class="list-group-item">
+                <div class="mb-2">
+                  <img src="https://via.placeholder.com/30" alt="Step 2" />
+                </div>
+                <h5>Make Payment</h5>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna,
+                  tortor tempus.
+                </p>
+              </div>
+              <div class="list-group-item">
+                <div class="mb-2">
+                  <img src="https://via.placeholder.com/30" alt="Step 3" />
+                </div>
+                <h5>Reach Airport on Selected Date</h5>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna,
+                  tortor tempus.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card shadow-sm">
+              <img
+                src="https://via.placeholder.com/400x300"
+                alt="Greece"
+                class="card-img-top"
+              />
+              <div class="card-body text-center">
+                <h5>Trip To Greece</h5>
+                <p>14-29 June, by Robbin Joseph</p>
+                <button class="btn btn-outline-warning me-2">Button 1</button>
+                <button class="btn btn-outline-secondary">Button 2</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section py-5">
+      <div class="container">
+        <span class="text-warning">What People Say About Us</span>
+        <h2 class="text-center mb-4">Testimonials</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="card shadow-sm text-center">
+              <div class="card-body">
+                <img
+                  src="https://via.placeholder.com/100"
+                  alt="Mike Taylor"
+                  class="rounded-circle mb-3"
+                />
+                <p class="card-text">
+                  "On the Windows talking painted pasture yet its express
+                  parties use. Sure last upon he same as knew next."
+                </p>
+                <h6>Mike Taylor</h6>
+                <p class="text-muted">Lahore, Pakistan | CEO of Red Button</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col text-center">
+            <img
+              src="https://via.placeholder.com/100"
+              alt="Partner 1"
+              class="me-3"
+            />
+            <img
+              src="https://via.placeholder.com/100"
+              alt="Partner 2"
+              class="me-3"
+            />
+            <img
+              src="https://via.placeholder.com/100"
+              alt="Partner 3"
+              class="me-3"
+            />
+            <img
+              src="https://via.placeholder.com/100"
+              alt="Partner 4"
+              class="me-3"
+            />
+            <img src="https://via.placeholder.com/100" alt="Partner 5" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section
+      class="newsletter-section py-5 text-center"
+      style="background: linear-gradient(to right, #f9f9f9, #e9ecef)"
+    >
+      <div class="container">
+        <p class="lead">
+          Subscribe to get information, latest news and other interesting offers
+          about Jadoo
+        </p>
+        <div class="input-group w-50 mx-auto">
+          <input type="email" class="form-control" placeholder="Your email" />
+          <button class="btn btn-warning text-white">Subscribe</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2">
+            <h5>Jadoo</h5>
+            <p>Book your trip in minute, get full Control for much longer.</p>
+          </div>
+          <div class="col-md-2">
+            <h6>Company</h6>
+            <ul class="list-unstyled">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Mobile</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <h6>Contact</h6>
+            <ul class="list-unstyled">
+              <li><a href="#">Help/FAQ</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Affiliates</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <h6>More</h6>
+            <ul class="list-unstyled">
+              <li><a href="#">Airlinefees</a></li>
+              <li><a href="#">Airline</a></li>
+              <li><a href="#">Low fare tips</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h6>Discover our app</h6>
+            <div>
+              <img
+                src="https://via.placeholder.com/100"
+                alt="App Store"
+                class="me-2"
+              />
+              <img src="https://via.placeholder.com/100" alt="Google Play" />
+            </div>
+          </div>
+        </div>
+        <p class="text-center mt-4">All rights reserved@jadoo.co</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
