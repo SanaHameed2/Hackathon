@@ -308,7 +308,6 @@ p {
 /* Destinations Section */
 .destinations-section {
   padding: 60px 0;
-  text-align: center;
 }
 
 .destinations-section h2 {
@@ -321,6 +320,10 @@ p {
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 20px;
+}
+
+.card .txt-des{
+text-align: right;
 }
 
 .destinations-section .card {
@@ -466,6 +469,9 @@ p {
 .testimonials-section h3 {
   margin: 5px 0;
 }
+.testimonials-section .txt2{
+  text-align: left;
+}
 
 /* Newsletter Section */
 .newsletter {
@@ -474,6 +480,10 @@ p {
   text-align: center;
   border-radius: 20px;
   margin: 40px 0;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .newsletter h2 {
@@ -517,7 +527,6 @@ p {
   padding: 60px 20px;
   background-color: white;
   border-top: 1px solid #ddd;
-  text-align: center;
 }
 
 .footer-content {
@@ -570,6 +579,7 @@ p {
   margin-top: 20px;
   font-size: 14px;
   color: #5E6282;
+  text-align: center;
 }
 
 /* Responsive Design */
