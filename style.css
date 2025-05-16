@@ -3,12 +3,14 @@ body {
   line-height: 1.6;
   color: #181E4B;
   background-color: #ffffff;
+  margin: 0;
+  padding: 0;
 }
 
 h1, h2, h3 {
   font-weight: 700;
   color: #181E4B;
-  font-family: 'Volkhov', serif; /* Volkhov is used for headings */
+  font-family: 'Volkhov', serif;
 }
 
 p {
@@ -16,11 +18,20 @@ p {
   font-size: 16px;
   line-height: 1.7;
 }
-/* navbar */
-/* ===================== Navbar ===================== */
+
+/* Container for consistent spacing */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Navbar */
 .navbar {
   padding: 1rem 0;
+  border-bottom: 1px solid #ddd;
 }
+
 .navbar .container {
   display: flex;
   justify-content: space-between;
@@ -30,45 +41,141 @@ p {
 .navbar-brand {
   font-weight: bold;
   font-size: 1.8rem;
+  text-decoration: none;
+  color: #181E4B;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .nav-link {
-  margin-right: 1.5rem;
   color: #333;
-  display: flex;
-  align-items: center;
-  gap: 5px;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
-.btn-nav {
-  background-color: transparent;
-  color:#333;
-  border-radius: 8px;
-  padding: 0.5rem 1.2rem;
-  border: 1px solid #333;
+.nav-link:hover {
+  color: #DF6951;
+}
+
+.btn-nav-login, .btn-nav-signup {
+  padding: 8px 16px;
   text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  margin: 0 8px;
+}
+
+.btn-nav-login {
+  background-color: transparent;
+  color: #333;
+  border: 1px solid transparent;
+}
+
+.btn-nav-login:hover, .btn-nav-login:focus {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #333;
+  outline: none;
+}
+
+.btn-nav-signup {
+  background-color: transparent;
+  color: #333;
+  border: 1px solid #333;
+}
+
+.btn-nav-signup:hover, .btn-nav-signup:focus {
+  background-color: #333;
+  color: #fff;
+  outline: none;
+}
+
+/* Language Dropdown */
+.language-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.language-btn {
+  background-color: transparent;
+  border: none;
+  color: #333;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.language-btn:hover, .language-btn:focus {
+  background-color: #e0e0e0;
+  color: #333;
+  outline: none;
+}
+
+.dropdown-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 120px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  z-index: 1;
+  border-radius: 4px;
+  right: 0;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.language-dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-icon {
+  width: 8px; 
+  height: 8px;
 }
 
 /* Hero Section */
 .hero-section {
   padding: 80px 0;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 600px;
+  z-index: 1;
 }
 
 .hero-section h1 {
   font-size: 4rem;
   line-height: 1.2;
-  font-weight: regular;
+  font-weight: normal;
 }
-.hero-section .orange-label{
-  color:#DF6951;
+.hero-section .orange-label {
+  color: #DF6951;
   font-weight: bold;
   font-size: 20px;
-
-}
-.hero-section .highlight {
-  color: #DF6951;
-  text-decoration: line-through;
-  text-decoration-color: #DF6951;
 }
 
 .hero-section p {
@@ -78,15 +185,32 @@ p {
   font-weight: 400;
 }
 
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
 .hero-section .btn1 {
-  background-color: #F1A501;
+  background: linear-gradient(90deg, #F1A501, #E07B00);
   color: white;
   padding: 12px 25px;
   border: none;
   border-radius: 10px;
   font-weight: 500;
-  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(241, 165, 1, 0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
+
+.hero-section .btn1:hover,
+.hero-section .btn1:focus {
+  background: linear-gradient(90deg, #E07B00, #D06A00);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(224, 123, 0, 0.4);
+  outline: none;
+}
+
 .hero-section .btn2 {
   background-color: transparent;
   color: #686D77;
@@ -94,75 +218,150 @@ p {
   border: none;
   border-radius: 10px;
   font-weight: 500;
-  transition: 0.3s;
-  font-size: 17px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.btn2 img{
-width: 100px;
-height: 100px;px;
+.hero-section .btn2:hover,
+.hero-section .btn2:focus {
+  background-color: #e0e0e0;
+  outline: none;
 }
 
-.hero-section .btn:hover {
-  background-color: #dd9401;
+.hero-section .btn2 img {
+  width: 100px;
+  height: 100px;
 }
 
-.hero-section .btn-secondary {
-  margin-left: 15px;
-  background: none;
-  color: #686D77;
-  font-weight: 500;
+.hero-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 50%;
+  height: auto;
+  z-index: 0;
 }
+
 /* Services Section */
 .services-section {
   padding: 60px 0;
-}
-
-.services-section h2 {
   text-align: center;
+  margin-top: 100px;
+}
+.services-section p {
+  font-size: 1rem;
+  font-family: poppins;
+  font-weight: 500;
+}
+.services-section h2 {
   font-size: 2.5rem;
   margin-bottom: 60px;
 }
-.services-section .card1 .card3 .card4 {
-  padding: 30px;
-  text-align: center;
-  background-color: #ffffff;
-  transition: 0.3s;
-  width: 262px;
-  height: 314px;
-}
-.services-section .card2 {
-  padding: 30px;
-  text-align: center;
-  border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
-  background-color: #ffffff;
-  transition: 0.3s;
-  width: 262px;
-  height: 314px;
+
+.services-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.services-section .card:hover {
+.services-section .card1,
+.services-section .card2,
+.services-section .card3,
+.services-section .card4 {
+  padding: 30px;
+  text-align: center;
+  background-color: #ffffff;
+  transition: transform 0.3s;
+  width: 262px;
+  height: 314px;
+  box-sizing: border-box;
+}
+
+.services-section .card2 {
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.services-section .card1:hover,
+.services-section .card2:hover,
+.services-section .card3:hover,
+.services-section .card4:hover {
   transform: translateY(-10px);
 }
-/* Destination Section */
+
+.services-section img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 15px;
+}
+
+.services-section h3 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+}
+/* Destinations Section */
 .destinations-section {
   padding: 60px 0;
+  text-align: center;
+}
+
+.destinations-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+}
+
+.destinations-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .destinations-section .card {
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
-  transition: 0.3s;
+  transition: transform 0.3s;
+  width: 300px;
 }
 
 .destinations-section .card:hover {
   transform: translateY(-10px);
 }
+
+.destinations-section img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.destinations-section h3 {
+  margin: 10px 0;
+}
+
+.destinations-section p {
+  margin: 0;
+}
+
 /* Booking Section */
 .booking-section {
   padding: 60px 0;
+}
+
+.booking-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.booking-steps {
+  flex: 1;
 }
 
 .booking-section h2 {
@@ -183,10 +382,65 @@ height: 100px;px;
   border-radius: 50%;
   margin-right: 15px;
 }
-/*Testimonials Section*/
+
+.trip-card {
+  flex: 1;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+.trip-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.trip-card h3 {
+  margin: 10px 0;
+}
+
+.trip-card p {
+  margin: 5px 0 15px;
+}
+
+.trip-card button {
+  margin: 5px;
+  padding: 10px 20px;
+  background-color: #F1A501;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.trip-card button:hover,
+.trip-card button:focus {
+  background-color: #dd9401;
+  outline: none;
+}
+
+/* Testimonials Section */
 .testimonials-section {
   padding: 60px 0;
   background-color: #f9f9ff;
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+}
+
+.testimonials-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
 .testimonials-section .card {
@@ -194,14 +448,43 @@ height: 100px;px;
   padding: 30px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
   background-color: white;
-  margin-bottom: 20px;
+  width: 400px;
+  text-align: left;
 }
+
+.testimonials-section img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.testimonials-section p {
+  margin: 10px 0;
+}
+
+.testimonials-section h3 {
+  margin: 5px 0;
+}
+
 /* Newsletter Section */
 .newsletter {
-  background-color: #F9F9FE;
+  background: linear-gradient(to right, #F9F9FE, #EDEEF9);
   padding: 60px 20px;
   text-align: center;
   border-radius: 20px;
+  margin: 40px 0;
+}
+
+.newsletter h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 .newsletter input[type="email"] {
@@ -210,7 +493,6 @@ height: 100px;px;
   max-width: 100%;
   border-radius: 10px;
   border: 1px solid #ccc;
-  margin-right: 10px;
 }
 
 .newsletter button {
@@ -220,12 +502,29 @@ height: 100px;px;
   border: none;
   border-radius: 10px;
   font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
-/* Footer section */
+
+.newsletter button:hover,
+.newsletter button:focus {
+  background-color: #c85643;
+  outline: none;
+}
+
+/* Footer Section */
 .footer {
   padding: 60px 20px;
   background-color: white;
   border-top: 1px solid #ddd;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
 }
 
 .footer .logo {
@@ -233,13 +532,142 @@ height: 100px;px;
   font-size: 1.8rem;
   font-weight: bold;
   color: #181E4B;
+  text-decoration: none;
 }
 
 .footer .col {
   margin-bottom: 20px;
+  flex: 1;
+  min-width: 150px;
+}
+
+.footer h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
 }
 
 .footer a {
   color: #5E6282;
   font-size: 15px;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.footer a:hover,
+.footer a:focus {
+  color: #DF6951;
+  outline: none;
+}
+
+.footer img {
+  width: 120px;
+  height: auto;
+  margin: 5px;
+}
+
+.footer-text {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #5E6282;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar .container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .nav-link, .btn-nav-login, .btn-nav-signup, .language-btn {
+    margin: 5px 0;
+  }
+
+  .dropdown-content {
+    right: auto;
+    left: 0;
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-image {
+    position: static;
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .services-cards, .destinations-cards, .testimonials-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .services-section .card1,
+  .services-section .card2,
+  .services-section .card3,
+  .services-section .card4,
+  .destinations-section .card,
+  .testimonials-section .card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .booking-content {
+    flex-direction: column;
+  }
+
+  .trip-card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .newsletter input[type="email"] {
+    width: 100%;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer .col {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .services-section h2,
+  .destinations-section h2,
+  .testimonials-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .booking-section h2,
+  .newsletter h2 {
+    font-size: 1.5rem;
+  }
+
+  .testimonials-section .card {
+    width: 100%;
+  }
 }
