@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jadoo Travel</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Volkhov:wght@700&display=swap"
-      rel="stylesheet"
-    />
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Volkhov:wght@700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
+    <!-- navbar -->
     <nav class="navbar">
       <div class="container">
-        <a href="#" class="navbar-brand"><img src="assets/Images and icons/Logo.png"></a>
+        <a href="#" class="navbar-brand"><img
+            src="assets/Images and icons/Logo.png" alt="Jadoo Logo" /></a>
         <div class="nav-links">
           <a href="#" class="nav-link">Destinations</a>
           <a href="#" class="nav-link">Hotels</a>
           <a href="#" class="nav-link">Flights</a>
           <a href="#" class="nav-link">Bookings</a>
-          <a href="#" class="btn-nav-login">Login</a>
-          <a href="#" class="btn-nav-signup">Sign Up</a>
+          <a href="#" class="nav-link">Login</a>
+          <a href="#" class="btn-nav-signup">Sign up</a>
           <div class="language-dropdown">
             <button class="language-btn">
               EN
-              <img
-                src="assets/Images and icons/arrow2.png"
-                alt="Dropdown"
-                class="dropdown-icon"
-              />
+              <img src="assets/Images and icons/arrow2.png" alt="Dropdown"
+                class="dropdown-icon" />
             </button>
             <div class="dropdown-content">
               <a href="#" data-lang="en">English</a>
@@ -39,10 +41,11 @@
       </div>
     </nav>
 
+    <!-- hero section -->
     <section class="hero-section">
       <div class="container">
         <div class="hero-content">
-          <h3 class="orange-label">Best Destinations Around The World</h3>
+          <h3 class="orange-label">Best Destinations around the world</h3>
           <h1>Travel, enjoy and live a new and full life</h1>
           <p>
             Built Wicket longer admire do barton vanity itself do in it.
@@ -50,33 +53,35 @@
             west hard for the.
           </p>
           <div class="hero-buttons">
-            <!-- <button class="btn1">Find out more</button> -->
-            <!-- <button class="btn2">
-               <img src="assets/Images and icons/Play button.png" alt="Play" />Play Demo
-            </button> -->
-      
+            <button class="btn-primary">Find out more</button>
+            <button class="btn-secondary">
+              <i class="fas fa-play"></i> Play Demo
+            </button>
           </div>
         </div>
-        <img src="assets/Images and icons/Traveller 1.png" alt="Traveler" class="hero-image" />
+        <img src="assets/Images and icons/Traveller 1.png" alt="Traveler"
+          class="hero-image" />
       </div>
     </section>
 
+    <!-- services section -->
     <section class="services-section">
       <div class="container">
-         <p>CATEGORY</p>
-        <h2>We Offer Best Services</h2>
+        <p class="section-subtitle">CATEGORY</p>
+        <h2 class="section-title">We Offer Best Services</h2>
         <div class="services-cards">
-          <div class="card1">
-            <img src="assets/Images and icons/weather.png" alt="Weather" />
+          <div class="service-card">
+            <img src="assets/Images and icons/satellite-dish.png"
+              alt="Weather" />
             <h3>Calculated Weather</h3>
             <p>Built Wicket longer admire do barton vanity itself do in it.</p>
           </div>
-          <div class="card2">
+          <div class="service-card highlighted">
             <img src="assets/Images and icons/flight.png" alt="Flights" />
             <h3>Best Flights</h3>
             <p>Engrossed listening. Park gate sell they west hard for the.</p>
           </div>
-          <div class="card3">
+          <div class="service-card">
             <img src="assets/Images and icons/local events.png" alt="Events" />
             <h3>Local Events</h3>
             <p>
@@ -84,8 +89,9 @@
               listening.
             </p>
           </div>
-          <div class="card4">
-            <img src="assets/Images and icons/customization.png" alt="Customization" />
+          <div class="service-card">
+            <img src="assets/Images and icons/customization.png"
+              alt="Customization" />
             <h3>Customization</h3>
             <p>
               We deliver outsourced aviation services for military customers.
@@ -95,42 +101,59 @@
       </div>
     </section>
 
+    <!-- destinations section -->
     <section class="destinations-section">
       <div class="container">
-        <p>Top Selling</p>
-        <h2>Top Destinations</h2>
+        <p class="section-subtitle">Top Selling</p>
+        <h2 class="section-title">Top Destinations</h2>
         <div class="destinations-cards">
-          <div class="card">
-            <img src="assets/Images and icons/Rectangle 14 (1).png" alt="Rome" />
-            <h3>Rome, Italy</h3>
-            <p class="txt-des">$5.42K</p>
-            <p>10 Days Trip</p>
+          <div class="destination-card">
+            <img src="assets/Images and icons/rome.jpeg" alt="Rome" />
+            <div class="destination-info">
+              <div>
+                <h3>Rome, Italy</h3>
+                <p>$5,42k</p>
+              </div>
+              <p><i class="fas fa-location-arrow"></i> 10 Days Trip</p>
+            </div>
           </div>
-          <div class="card">
-            <img src="assets/Images and icons/Rectangle 14 (1).png" alt="London" />
-            <h3>London, UK</h3>
-            <p class="txt-des">$4.2K</p>
-            <p>12 Days Trip</p>
+          <div class="destination-card">
+            <img src="assets/Images and icons/uk.jpeg" alt="London" />
+            <div class="destination-info">
+              <div>
+                <h3>London, UK</h3>
+                <p>$4.2k</p>
+              </div>
+              <p><i class="fas fa-location-arrow"></i> 12 Days Trip</p>
+            </div>
           </div>
-          <div class="card">
-            <img src="assets/Images and icons/Rectangle 14 (1).png" alt="Europe" />
-            <h3>Full Europe</h3>
-            <p class="txt-des">$15K</p>
-             <p>28 Days Trip</p>
+          <div class="destination-card">
+            <img src="assets/Images and icons/EU.jpeg" alt="Europe" />
+            <div class="destination-info">
+              <div>
+                <h3>Full Europe</h3>
+                <p>$15k</p>
+              </div>
+              <p><i class="fas fa-location-arrow"></i> 28 Days Trip</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- booking section -->
     <section class="booking-section">
       <div class="container">
         <div class="booking-content">
           <div class="booking-steps">
-            <h3>Easy and Fast</h3>
-            <h2>Book Your Next Trip In 3 Easy Steps</h2>
+            <p class="section-subtitle">Easy and Fast</p>
+            <h2 class="section-title">Book Your Next Trip In 3 Easy Steps</h2>
             <div class="step">
-              <div class="step-icon"><img src="assets/Images and icons/Group 7.png"></div>
-              <div>
+              <div class="step-icon">
+                <img src="assets/Images and icons/Group 7.png"
+                  alt="Destination" />
+              </div>
+              <div class="step-content">
                 <h3>Choose Destination</h3>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna,
@@ -139,8 +162,11 @@
               </div>
             </div>
             <div class="step">
-              <div class="step-icon"><img src="assets/Images and icons/Group 110.png"></div>
-              <div>
+              <div class="step-icon">
+                <img src="assets/Images and icons/Group 110.png"
+                  alt="Payment" />
+              </div>
+              <div class="step-content">
                 <h3>Make Payment</h3>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna,
@@ -149,8 +175,11 @@
               </div>
             </div>
             <div class="step">
-              <div class="step-icon"><img src="assets/Images and icons/Group 7.png"></div>
-              <div>
+              <div class="step-icon">
+                <img src="assets/Images and icons/Group 12.png"
+                  alt="Airport" />
+              </div>
+              <div class="step-content">
                 <h3>Reach Airport on Selected Date</h3>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna,
@@ -160,89 +189,135 @@
             </div>
           </div>
           <div class="trip-card">
-            <img src="assets/Images and icons/greece.jpg" alt="Greece" />
-            <h3>Trip To Greece</h3>
-            <p>14-29 June, by Robbin Joseph</p>
-            <button>Button 1</button>
-            <button>Button 2</button>
+            <div class="trip-image">
+              <img src="assets/Images and icons/Greece.jpg" alt="Greece" />
+              <p>Trip to Greece</p>
+            </div>
+            <div class="trip-details">
+              <div class="trip-info">
+                <p><span>14-29 June</span> | by Robbin joseph</p>
+              </div>
+              <div class="trip-actions">
+                <button><i class="fas fa-leaf"></i></button>
+                <button><i class="fas fa-map-marker-alt"></i></button>
+                <button><i class="fas fa-send"></i></button>
+              </div>
+              <div class="trip-people">
+                <div>
+                  <i class="fas fa-building"></i>
+                  <span>24 people going</span>
+                </div>
+                <i class="fas fa-heart"></i>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Testimonial section -->
     <section class="testimonials-section">
       <div class="container">
-        <p class="txt2">TESTIMONIALS</p>
-        <h2>What People Say About Us</h2>
-        <div class="testimonials-cards">
-          <div class="card">
-            <img src="mike.jpg" alt="Mike" />
+        <p class="section-subtitle">Testimonials</p>
+        <h2 class="section-title">What People Say About Us.</h2>
+        <div class="testimonial-card">
+          <div class="testimonial-content">
             <p>
               "On the Windows talking painted pasture yet its express parties
-              use. Sure last upon he same as knew next."
+              use. Sure last upon he same as knew next. Of believed or diverted
+              no."
             </p>
             <h3>Mike Taylor</h3>
-            <p>Lahore, Pakistan | CEO of Red Button</p>
+            <p>Lahore, Pakistan</p>
           </div>
-          <div class="card">
-            <img src="chris.jpg" alt="Chris" />
-            <p>
-              "Traveling with Jadoo was an amazing experience. Their services
-              made my trip seamless and enjoyable."
-            </p>
-            <h3>Chris Thomas</h3>
-            <p>New York, USA | Travel Blogger</p>
+          <div class="testimonial-author">
+            <p>Chris Thomas</p>
+            <p>CEO of Red Button</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="newsletter">
+    <!-- partners section -->
+    <section class="partners-section">
       <div class="container">
-        <h2>
-          Subscribe to get information, latest news and other interesting offers
-          about Jadoo
-        </h2>
-        <form class="newsletter-form">
-          <input type="email" placeholder="Your email" />
-          <button type="submit">Subscribe</button>
-        </form>
+        <img src="assets/Images and icons/image 30.png" alt="Axon" />
+        <img src="assets/Images and icons/image 30.png" alt="Jetstar" />
+        <img src="assets/Images and icons/image 30.png"alt="Expedia" />
+        <img src="assets/Images and icons/image 30.png" alt="Qantas" />
+        <img src="assets/Images and icons/image 30.png" alt="Alitalia" />
       </div>
     </section>
 
+    <!-- newsletter section -->
+    <section class="newsletter-section">
+      <div class="container">
+        <div class="newsletter-content">
+          <h2>
+            Subscribe to get information, latest news and other interesting
+            offers
+            about Jadoo
+          </h2>
+          <form class="newsletter-form">
+            <div class="input-group">
+              <i class="fas fa-envelope"></i>
+              <input type="email" placeholder="Your email" />
+            </div>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer section -->
     <footer class="footer">
       <div class="container">
         <div class="footer-content">
-          <div class="col">
-            <a href="#" class="logo"><img src="assets/Images and icons/Logo.png"></a>
-            <p>Book your trip in minute, get full Control for much longer.</p>
+          <div class="footer-col footer-about">
+            <a href="#" class="logo"><img src="assets/Images and icons/Logo.png"
+                alt="Jadoo" /></a>
+            <p>
+              Book your trip in minute, get full Control for much longer.
+            </p>
           </div>
-          <div class="col">
+          <div class="footer-col">
             <h3>Company</h3>
             <a href="#">About</a>
             <a href="#">Careers</a>
             <a href="#">Mobile</a>
           </div>
-          <div class="col">
+          <div class="footer-col">
             <h3>Contact</h3>
             <a href="#">Help/FAQ</a>
             <a href="#">Press</a>
             <a href="#">Affiliates</a>
           </div>
-          <div class="col">
+          <div class="footer-col">
             <h3>More</h3>
             <a href="#">Airlinefees</a>
             <a href="#">Airline</a>
             <a href="#">Low fare tips</a>
           </div>
-          <div class="col">
+          <div class="footer-col footer-social">
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
             <h3>Discover our app</h3>
-            <a href="#"><img src="assets/Images and icons/Google Play.png" alt="Google Play" /></a>
-            <a href="#"><img src="assets/Images and icons/Play Store.png" alt="App Store" /></a>
+            <div class="app-download">
+              <a href="#"><img src="assets/Images and icons/Google Play.png"
+                  alt="Google Play" /></a>
+              <a href="#"><img src="assets/Images and icons/Play Store.png"
+                  alt="App Store" /></a>
+            </div>
           </div>
         </div>
-        <p class="footer-text">All rights reserved@jadoo.co</p>
+        <div class="footer-copyright">
+          <p>All rights reserved@jadoo.co</p>
+        </div>
       </div>
     </footer>
   </body>
+
 </html>
